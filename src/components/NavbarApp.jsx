@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, NavDropdown, Form } from 'react-bootstrap';
 import { TiDeviceTablet } from 'react-icons/ti';
 import { LuLayoutPanelLeft, LuPanelLeftOpen, LuPanelLeftClose } from 'react-icons/lu';
 import { BsInfoSquare, BsSun, BsMoon } from 'react-icons/bs'; 
+import { FaSun, FaMoon  } from "react-icons/fa6";
 import { IoSettingsOutline } from 'react-icons/io5';
 
 const NavbarApp = ({ darkMode, setdarkMode }) => {
@@ -22,11 +23,11 @@ const NavbarApp = ({ darkMode, setdarkMode }) => {
             <Nav.Link href="#menuclients" className='fw-semibold icon-link icon-link-hover'>
               <TiDeviceTablet /> Carta para Clientes
             </Nav.Link>
-            <NavDropdown className='fw-semibold icon-link-hover' title={<><LuLayoutPanelLeft /> Paneles</>} id="nav-dropdown">
-              <NavDropdown.Item className='fw-semibold icon-link icon-link-hover' href="#action/3.1">
+            <NavDropdown className='fw-semibold icon-link-hover' data-bs-theme={darkMode ? "light" : "dark"} title={<><LuLayoutPanelLeft /> Paneles</>} id="nav-dropdown">
+              <NavDropdown.Item className='fw-semibold icon-link icon-link-hover' href="#mesas">
                 <LuPanelLeftOpen /> Para Pedidos
               </NavDropdown.Item>
-              <NavDropdown.Item className='fw-semibold icon-link icon-link-hover' href="#action/3.2">
+              <NavDropdown.Item className='fw-semibold icon-link icon-link-hover' href="#cocina">
                 <LuPanelLeftClose /> Para Cocina
               </NavDropdown.Item>
             </NavDropdown>
@@ -40,15 +41,16 @@ const NavbarApp = ({ darkMode, setdarkMode }) => {
             </Nav.Link>
             <Nav.Link className='fw-semibold' href="#link">
               <Form className="d-flex align-items-center">
-                <BsSun className="me-2" />
+                <FaSun className="sun-icon" />
                 <Form.Check
                   type="switch"
+                  className='ms-2'
                   id="custom-switch"
                   label=""
                   checked={darkMode}
                   onChange={handleSwitchChange}
                 />
-                <BsMoon className="ms-1" />
+                <FaMoon className="moon-icon" />
               </Form>
             </Nav.Link>
           </Nav>

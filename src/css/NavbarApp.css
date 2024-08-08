@@ -10,3 +10,11 @@
   .icon-link svg {
     margin-right: 0.2rem; /* Espacio entre el ícono y el texto */
   }
+
+  .sun-icon{
+color: #e9da03;
+  }
+
+  .moon-icon{
+color: #666666
+  }
