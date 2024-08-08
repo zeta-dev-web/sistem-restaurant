@@ -1,0 +1,12 @@
+.icon-link {
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-link-hover:hover {
+    transform: translate3d(0, -0.180rem, 0); /* Aplica la transformación directamente */
+  }
+  
+  .icon-link svg {
+    margin-right: 0.2rem; /* Espacio entre el ícono y el texto */
+  }

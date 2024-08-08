@@ -1,0 +1,61 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-developer {
+    color: #6c757d;
+  }
+  
+.ig-icon-link{
+    color: #6c757d;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.ig-icon-link:hover {
+    color: #dd2a7b; /* Cambia este color según el icono (e.g., Telegram, WhatsApp, etc.) */
+  }
+
+  .ws-icon-link {
+    color: #6c757d;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .ws-icon-link:hover {
+    color: #27b104; /* Cambia este color según el icono (e.g., Telegram, WhatsApp, etc.) */
+  }
+
+  .git-icon-link {
+    color: #6c757d;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .git-icon-link:hover {
+    color: #000000; /* Cambia este color según el icono (e.g., Telegram, WhatsApp, etc.) */
+  }
+  
+  .git-dark-icon-link {
+    color: #6c757d;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  .git-dark-icon-link:hover {
+    color: #ffffff; /* Cambia este color según el icono (e.g., Telegram, WhatsApp, etc.) */
+  }
+  .footer-divider {
+    border: 0;
+    height: 1px;
+    background: #ccc; /* Cambia este color según el tema (claro/oscuro) */
+    margin: 20px 0; /* Ajusta el margen según lo necesites */
+  }  
