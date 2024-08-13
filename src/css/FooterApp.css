@@ -53,9 +53,3 @@
   .git-dark-icon-link:hover {
     color: #ffffff; /* Cambia este color según el icono (e.g., Telegram, WhatsApp, etc.) */
   }
-  .footer-divider {
-    border: 0;
-    height: 1px;
-    background: #ccc; /* Cambia este color según el tema (claro/oscuro) */
-    margin: 20px 0; /* Ajusta el margen según lo necesites */
-  }  

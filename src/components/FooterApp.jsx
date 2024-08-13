@@ -29,7 +29,7 @@ const FooterApp = ({ darkMode }) => {
           <FaGithub />
         </a>
       </div>
-      <hr className="footer-divider"/>
+      <hr className="text-secondary"/>
       <div className="footer-developer">
         <p className='fw-semibold'>{texts[currentText]}</p>
       </div>
