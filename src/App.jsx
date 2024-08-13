@@ -19,6 +19,7 @@ function App() {
   const [darkMode, setdarkMode] = useState(true);  
   return (
     <> <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
+    <HomeScreen />
     <FooterApp darkMode={darkMode} />
       {/* <BrowserRouter>
        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
