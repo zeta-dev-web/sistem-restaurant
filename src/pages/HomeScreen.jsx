@@ -6,13 +6,13 @@ import useUserRole from '../assets/hooks/useUserRole';
 import roleStyles from '../assets/hooks/roleStyles';
 const HomeScreen = () => {
   const [stylesLoaded, setStylesLoaded] = useState(false);
-  const userRole = useUserRole(); // Hook para obtener el rol del usuario
+  const userRole = "admin"; // Hook para obtener el rol del usuario
 
-  const isLargeScreen = useMediaQuery({ query: '(min-width: 992px)' }); // lg y superiores
-  const isMediumScreen = useMediaQuery({
-    query: '(min-width: 768px) and (max-width: 991px)',
-  }); // md
-  const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' }); // sm y menores
+  // const isLargeScreen = useMediaQuery({ query: '(min-width: 992px)' }); // lg y superiores
+  // const isMediumScreen = useMediaQuery({
+  //   query: '(min-width: 768px) and (max-width: 991px)',
+  // }); // md
+  // const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' }); // sm y menores
 
   useEffect(() => {
     if (userRole) {

@@ -24,7 +24,7 @@ const useUserRole = () => {
 const getUserRoleFromServer = async () => {
   // Implementa la lógica para obtener el rol real
   // Ejemplo: return 'admin'; // o 'client', 'kitchen', 'waiter'
-  return 'admin'; // Cambia según el rol que deseas probar
+  return 'waiter'; // Cambia según el rol que deseas probar
 };
 
 export default useUserRole;
