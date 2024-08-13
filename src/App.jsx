@@ -18,7 +18,7 @@ import PanelkitchenScreen from "./pages/PanelkitchenScreen.jsx";
 function App() {
   const [darkMode, setdarkMode] = useState(true);  
   return (
-    <> <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
+    <div className="d-flex flex-column justify-content-between h-100"> <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
     <HomeScreen />
     <FooterApp darkMode={darkMode} />
       {/* <BrowserRouter>
@@ -35,7 +35,7 @@ function App() {
       <Footer/>
       </div>
     </BrowserRouter> */}
-    </>
+    </div>
   );
 }
 
