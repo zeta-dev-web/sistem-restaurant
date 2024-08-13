@@ -1,15 +1,15 @@
-
-
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-}
+    grid-template-rows: repeat(5, auto); /* O usa alturas fijas si es necesario */
+    gap: 1px;
+  }
     
-.div1 {
+.div3 {
     grid-column: span 3 / span 3;
     grid-row: span 5 / span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
 .div2 {
@@ -18,10 +18,9 @@
     grid-column-start: 4;
 }
 
-.div3 {
+.div4 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 4;
     grid-row-start: 4;
 }
-      

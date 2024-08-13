@@ -33,44 +33,44 @@ const HomeScreen = () => {
         {userRole === 'admin' && (
           <>
             <Col className="p-0 div1">
-              <CardApp title="Card 1" content="Contenido de la card 1" />
+              <CardApp title="Card 1" content="PANEL ADMIN" />
             </Col>
             <Col className="p-0 div2">
-              <CardApp title="Card 2" content="Contenido de la card 2" />
+              <CardApp title="Card 2" content="PANEL DE MOZOS" />
             </Col>
             <Col className="p-0 div3">
-              <CardApp title="Card 3" content="Contenido de la card 3" />
+              <CardApp title="Card 3" content="PANEL COCINA" />
             </Col>
             <Col className="p-0 div4">
-              <CardApp title="Card 4" content="Contenido de la card 4" />
+              <CardApp title="Card 4" content="CARTA O MENU" />
             </Col>
           </>
         )}
         {userRole === 'client' && (
-          <Col className="p-0 div1">
-            <CardApp title="Card 1" content="Contenido de la card 1" />
+          <Col className="p-0 div4">
+            <CardApp title="Card 1" content="CARTA O MENU" />
           </Col>
         )}
         {userRole === 'kitchen' && (
           <>
-            <Col className="p-0 div1">
-              <CardApp title="Card 1" content="Contenido de la card 1" />
-            </Col>
             <Col className="p-0 div2">
-              <CardApp title="Card 2" content="Contenido de la card 2" />
+              <CardApp title="Card 1" content="PANEL DE MOZOS" />
             </Col>
             <Col className="p-0 div3">
-              <CardApp title="Card 3" content="Contenido de la card 3" />
+              <CardApp title="Card 2" content="PANEL COCINA" />
+            </Col>
+            <Col className="p-0 div4">
+              <CardApp title="Card 3" content="MENU O CARTA" />
             </Col>
           </>
         )}
         {userRole === 'waiter' && (
           <>
-            <Col className="p-0 div1">
-              <CardApp title="Card 1" content="Contenido de la card 1" />
-            </Col>
             <Col className="p-0 div2">
-              <CardApp title="Card 2" content="Contenido de la card 2" />
+              <CardApp title="Card 1" content="PANEL DE MOZOS" />
+            </Col>
+            <Col className="p-0 div4">
+              <CardApp title="Card 2" content="MENU O CARTA" />
             </Col>
           </>
         )}
