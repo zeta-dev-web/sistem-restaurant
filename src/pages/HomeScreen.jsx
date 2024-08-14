@@ -1,12 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import CardApp from '../components/CardApp';
-import { useMediaQuery } from 'react-responsive';
-import useUserRole from '../assets/hooks/useUserRole';
-import roleStyles from '../assets/hooks/roleStyles';
+import React, { useEffect, useState } from "react";
+import { Col } from "react-bootstrap";
+import CardApp from "../components/CardApp";
+import "../css/HomeScreen.css";
+// import { useMediaQuery } from 'react-responsive';
+import useUserRole from "../assets/hooks/useUserRole";
+import adminImage from '../images/admin.webp';
+import kitchenImage from '../images/kitchen.webp';
+import waiterImage from '../images/waiter.webp';
+import clientImage from '../images/client.webp';
+
 const HomeScreen = () => {
-  const [stylesLoaded, setStylesLoaded] = useState(false);
-  const userRole = "admin"; // Hook para obtener el rol del usuario
+  const [userRole, setUserRole] = useState('');
+  useEffect(() => {
+    const storedRole = localStorage.getItem('userRole');
+    if (storedRole) {
+      setUserRole(storedRole);
+    }
+  }, []);
 
   // const isLargeScreen = useMediaQuery({ query: '(min-width: 992px)' }); // lg y superiores
   // const isMediumScreen = useMediaQuery({
@@ -14,66 +24,51 @@ const HomeScreen = () => {
   // }); // md
   // const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' }); // sm y menores
 
-  useEffect(() => {
-    if (userRole) {
-      const stylePath = roleStyles[userRole];
-      if (stylePath) {
-        import(`../css/${stylePath}`).then(() => setStylesLoaded(true));
-      }
-    }
-  }, [userRole]);
-
-  if (!stylesLoaded) {
-    return <div>Loading...</div>; // Opcional: Muestra un mensaje o spinner mientras carga el estilo
-  }
-
   return (
     <div className="h-100">
-      <div className="text-center grid parent h-100">
-        {userRole === 'admin' && (
-          <>
-            <Col className="p-0 div1">
-              <CardApp title="Card 1" content="PANEL ADMIN" />
-            </Col>
-            <Col className="p-0 div2">
-              <CardApp title="Card 2" content="PANEL DE MOZOS" />
-            </Col>
-            <Col className="p-0 div3">
-              <CardApp title="Card 3" content="PANEL COCINA" />
-            </Col>
-            <Col className="p-0 div4">
-              <CardApp title="Card 4" content="CARTA O MENU" />
-            </Col>
-          </>
-        )}
-        {userRole === 'client' && (
-          <Col className="p-0 div4">
-            <CardApp title="Card 1" content="CARTA O MENU" />
-          </Col>
-        )}
-        {userRole === 'kitchen' && (
-          <>
-            <Col className="p-0 div2">
-              <CardApp title="Card 1" content="PANEL DE MOZOS" />
-            </Col>
-            <Col className="p-0 div3">
-              <CardApp title="Card 2" content="PANEL COCINA" />
-            </Col>
-            <Col className="p-0 div4">
-              <CardApp title="Card 3" content="MENU O CARTA" />
-            </Col>
-          </>
-        )}
-        {userRole === 'waiter' && (
-          <>
-            <Col className="p-0 div2">
-              <CardApp title="Card 1" content="PANEL DE MOZOS" />
-            </Col>
-            <Col className="p-0 div4">
-              <CardApp title="Card 2" content="MENU O CARTA" />
-            </Col>
-          </>
-        )}
+      <div className="text-center parent">
+        <Col className={`p-0 ${userRole === "admin" ? "admin1" : "d-none"}`}>
+          <CardApp title="Card 1" content="PANEL ADMIN" image={adminImage}/>
+        </Col>
+        <Col
+          className={`p-0 ${
+            userRole === "admin"
+              ? "admin2"
+              : userRole === "waiter"
+              ? "waiter1"
+              : userRole === "kitchen"
+              ? "kitchen2"
+              : "d-none"
+          }`}
+        >
+          <CardApp title="Card 2" content="PANEL DE MOZOS" image={waiterImage} />
+        </Col>
+        <Col
+          className={`p-0 ${
+            userRole === "admin"
+              ? "admin3"
+              : userRole === "waiter"
+              ? "d-none"
+              : userRole === "kitchen"
+              ? "kitchen1"
+              : "d-none"
+          }`}
+        >
+          <CardApp title="Card 3" content="PANEL COCINA" image={kitchenImage} />
+        </Col>
+        <Col
+          className={`p-0 ${
+            userRole === "admin"
+              ? "admin4"
+              : userRole === "waiter"
+              ? "waiter2"
+              : userRole === "kitchen"
+              ? "kitchen3"
+              : "client1"
+          }`}
+        >
+          <CardApp title="Card 4" content="CARTA O MENU"  image={clientImage}/>
+        </Col>
       </div>
     </div>
   );
