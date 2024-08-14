@@ -26,7 +26,7 @@ const HomeScreen = () => {
 
   return (
     <div className="h-100">
-      <div className="text-center parent">
+      <div className="text-center parent h-100">
         <Col className={`p-0 ${userRole === "admin" ? "admin1" : "d-none"}`}>
           <CardApp title="Card 1" content="PANEL ADMIN" image={adminImage}/>
         </Col>
