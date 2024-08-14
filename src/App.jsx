@@ -12,7 +12,7 @@ import LoginScreen from "./pages/LoginScreen.jsx";
 import PanelAdminScreen from "./pages/PanelAdminScreen.jsx";
 import PanelWaiterScreen from "./pages/PanelWaiterScreen.jsx";
 import PanelkitchenScreen from "./pages/PanelkitchenScreen.jsx";
-localStorage.setItem('userRole', 'admin'); // o 'client', 'kitchen', 'waiter'
+// localStorage.setItem('userRole', 'admin'); // o 'client', 'kitchen', 'waiter'
 
 
 function App() {

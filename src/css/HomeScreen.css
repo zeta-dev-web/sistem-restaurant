@@ -7,39 +7,36 @@
         gap: 1px;
     }
     .client1 {
-        grid-column: span 5 / span 5;
-        grid-row: span 5 / span 5;
+        grid-column: span 4 / span 4;
+    grid-row: span 12 / span 12;
     }
       
     .waiter1 {
-        grid-column: span 3 / span 3;
-        grid-row: span 5 / span 5;
+        grid-column: span 4 / span 4;
+        grid-row: span 8 / span 8;
     }
     
     .waiter2 {
-        grid-column: span 2 / span 2;
-        grid-row: span 5 / span 5;
-        grid-column-start: 4;
+        grid-column: span 4 / span 4;
+        grid-row: span 4 / span 4;
+        grid-row-start: 9;
     }
     
     .kitchen1 {
-        grid-column: span 3 / span 3;
-        grid-row: span 5 / span 5;
-        grid-column-start: 1;
-        grid-row-start: 1;
+        grid-column: span 4 / span 4;
+        grid-row: span 7 / span 7;
     }
     
     .kitchen2 {
-        grid-column: span 2 / span 2;
+        grid-column: span 4 / span 4;
         grid-row: span 3 / span 3;
-        grid-column-start: 4;
+        grid-row-start: 8;  
     }
     
     .kitchen3 {
-        grid-column: span 2 / span 2;
-        grid-row: span 2 / span 2;
-        grid-column-start: 4;
-        grid-row-start: 4;
+        grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    grid-row-start: 11;
     }
     
     .admin1 {
@@ -64,8 +61,56 @@
         grid-row: span 2 / span 2;
         grid-row-start: 11;
     }
-    
-    
            
   }
+
+  @media (max-width: 767px) and (orientation: landscape) {
+    .parent {
+        display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 55px);
+    gap: 1px;
+      }
+      .admin1{ grid-column: span 4 / span 4;
+        grid-row: span 3 / span 3;}
+      .admin2{    grid-column: span 4 / span 4;
+        grid-row: span 3 / span 3;
+        grid-column-start: 5;}
+      .admin3{ grid-column: span 4 / span 4;
+        grid-row: span 3 / span 3;
+        grid-row-start: 4;}
+      .admin4{ grid-column: span 4 / span 4;
+        grid-row: span 3 / span 3;
+        grid-column-start: 5;
+        grid-row-start: 4;}
+        .kitchen1 {
+            grid-column: span 8 / span 8;
+    grid-row: span 3 / span 3;
+        }
+        .kitchen2 {
+            grid-column: span 8 / span 8;
+            grid-row: span 2 / span 2;
+            grid-row-start: 4;
+        }
+        .kitchen3 {
+            grid-column: span 8 / span 8;
+    grid-row-start: 6;
+    grid-row-end: 7;
+        }
+        .waiter1 {
+            grid-column: span 5 / span 5;
+    grid-row: span 6 / span 6;
+        }
+        
+        .waiter2 {
+            grid-column: span 3 / span 3;
+            grid-row: span 6 / span 6;
+            grid-column-start: 6;
+        }
+        .client1 {
+            grid-column: span 8 / span 8;
+            grid-row: span 6 / span 6;
+        }
+  }
+
   
