@@ -9,7 +9,7 @@ import kitchenImage from '../images/kitchen.webp';
 import waiterImage from '../images/waiter.webp';
 import clientImage from '../images/client.webp';
 
-const HomeScreen = () => {
+const HomeScreen = ({darkMode}) => {
   const [userRole, setUserRole] = useState('');
   useEffect(() => {
     const storedRole = localStorage.getItem('userRole');
@@ -17,16 +17,9 @@ const HomeScreen = () => {
       setUserRole(storedRole);
     }
   }, []);
-
-  // const isLargeScreen = useMediaQuery({ query: '(min-width: 992px)' }); // lg y superiores
-  // const isMediumScreen = useMediaQuery({
-  //   query: '(min-width: 768px) and (max-width: 991px)',
-  // }); // md
-  // const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' }); // sm y menores
-
   return (
-    <div className="h-100">
-      <div className="text-center parent h-100">
+    <div className={`h-100 ${darkMode===true?'bg-dark':'bg-light'}`}>
+      <div className="text-center parent h-100 mt-1 mb-1">
         <Col className={`p-0 ${userRole === "admin" ? "admin1" : "d-none"}`}>
           <CardApp title="Card 1" content="PANEL ADMIN" image={adminImage}/>
         </Col>

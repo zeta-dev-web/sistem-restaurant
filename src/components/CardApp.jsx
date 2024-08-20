@@ -1,15 +1,11 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
-import '../css/CardApp.css'; // Asegúrate de tener un archivo CSS
 
-const CardApp = ({ title, content, image }) => {
+const CardApp = () => {
   return (
-    <div className="card-container">
-      <Card.Img className="card-image" src={image} alt={title} />
+    <div>
+      
     </div>
-  );
-};
+  )
+}
 
-export default CardApp;
-
-
+export default CardApp

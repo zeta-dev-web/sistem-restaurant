@@ -7,19 +7,21 @@ import NavbarApp from "./components/NavbarApp.jsx";
 import FooterApp from "./components/FooterApp.jsx";
 import AboutScreen from "./pages/AboutScreen.jsx";
 import HomeScreen from "./pages/HomeScreen.jsx";
+import IndexScreen from "./pages/IndexScreen.jsx";
 import ErrorScreen from "./pages/ErrorScreen.jsx";
 import LoginScreen from "./pages/LoginScreen.jsx";
 import PanelAdminScreen from "./pages/PanelAdminScreen.jsx";
 import PanelWaiterScreen from "./pages/PanelWaiterScreen.jsx";
 import PanelkitchenScreen from "./pages/PanelkitchenScreen.jsx";
-localStorage.setItem('userRole', 'admin'); // o 'client', 'kitchen', 'waiter'
+// localStorage.setItem('userRole', 'admin'); // o 'client', 'kitchen', 'waiter'
 
 
 function App() {
   const [darkMode, setdarkMode] = useState(true);  
   return (
-    <div className="d-flex flex-column justify-content-between h-100"> <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
-    <HomeScreen />
+    <div className="d-flex flex-column justify-content-between h-100"> 
+    <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
+    <IndexScreen darkMode={darkMode} />
     <FooterApp darkMode={darkMode} />
       {/* <BrowserRouter>
        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
