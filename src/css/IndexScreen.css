@@ -7,7 +7,6 @@
   border-radius: 0 !important;
 }
 
-/* Eliminar el border-radius por defecto de las imágenes en las cards */
 .card-img-top {
   width: 100%;
   height: 100%;
@@ -16,8 +15,6 @@
   transition: filter 0.3s ease-in-out;
 }
 
-/* Filtro blanco y negro para dispositivos grandes */
-@media (min-width: 992px) {
   .card-img-top {
     filter: grayscale(100%);
   }
@@ -25,7 +22,7 @@
   .custom-card:hover .card-img-top {
     filter: grayscale(0%);
   }
-}
+
 
 /* Pestaña con overlay y texto */
 .custom-overlay {
@@ -55,7 +52,7 @@
   padding-right: 0;
   padding-left: 0;
 }
-@media (max-width: 992px){
+@media (max-width: 767px) {
   .custom-card {
     position: relative;
     overflow: hidden;
@@ -71,7 +68,12 @@
     border-radius: 0 !important;
     transition: filter 0.3s ease-in-out;
   }
-  .sm-pantalla{
-    height: 50% !important;
-  }
 } 
+
+/* Estilos para tablets (ancho entre 768px y 932px) */
+@media (min-width: 768px) and (max-width: 932px) {
+  .custom-card {
+    /* No se aplica max-height en tablets */
+    max-height: none !important;
+  }
+}
