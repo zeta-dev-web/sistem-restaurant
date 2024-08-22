@@ -18,7 +18,7 @@ const IndexScreen = () => {
           }`}>
         {/* Admin Panel - Visible only to Admin */}
         <div
-          className={`col-lg-3 col-md-6 col-12 m-0 p-0 border-0 ${
+          className={`col-lg-3 col-md-6 col-12 border-0 ${
             userRole !== "admin" ? "d-none" : ""
           }`}
         >
@@ -42,7 +42,7 @@ const IndexScreen = () => {
               : userRole === "kitchen"
               ? "col-lg-4 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
-          } m-0 p-0 border-0 custom-card`}
+          } border-0 custom-card`}
         >
           <div
             className={`card h-100 border-0 custom-card ${
@@ -66,7 +66,7 @@ const IndexScreen = () => {
               : userRole === "kitchen"
               ? "col-lg-4 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
-          } m-0 p-0 border-0 custom-card`}
+          } border-0 custom-card`}
         >
           <div
             className={`card h-100 border-0 ${
@@ -94,7 +94,7 @@ const IndexScreen = () => {
               : userRole === "waiter"
               ? "col-lg-6 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
-          } m-0 p-0 border-0 custom-card`}
+          } border-0 custom-card`}
         >
           <div
             className={`card h-100 border-0 ${
