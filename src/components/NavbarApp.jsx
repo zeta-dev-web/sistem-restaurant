@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/NavbarApp.css";
+import icono from "../images/icon-nav.png";
+import iconodark from "../images/icon-nav-dark.png";
 import { Navbar, Nav, Container, NavDropdown, Form } from "react-bootstrap";
 import { TiDeviceTablet } from "react-icons/ti";
 import {
@@ -10,7 +12,7 @@ import {
 import { BsInfoSquare, BsSun, BsMoon } from "react-icons/bs";
 import { FaSun, FaMoon } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
-import { BiLogIn , BiLogOut } from "react-icons/bi";
+import { BiLogIn, BiLogOut } from "react-icons/bi";
 
 const NavbarApp = ({ darkMode, setdarkMode, login }) => {
   const handleSwitchChange = () => {
@@ -24,7 +26,12 @@ const NavbarApp = ({ darkMode, setdarkMode, login }) => {
       data-bs-theme={darkMode ? "dark" : "light"}
     >
       <Container fluid>
-        <Navbar.Brand className="fw-bold" href="#home">
+        <Navbar.Brand className="fw-bold" href="/">
+          <img
+            src={darkMode ? iconodark : icono}
+            alt="Icono del Navbar"
+            style={{ width: "30px", marginRight: "10px" }} // Ajusta el tamaño y el espacio según sea necesario
+          />
           Mi Bar
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -79,7 +86,8 @@ const NavbarApp = ({ darkMode, setdarkMode, login }) => {
               className="fw-semibold icon-link icon-link-hover"
               href="login"
             >
-              {login ? <BiLogOut  /> : <BiLogIn  />}{login ? "Cerrar Sesión" : "Iniciar Sesión"}
+              {login ? <BiLogOut /> : <BiLogIn />}
+              {login ? "Cerrar Sesión" : "Iniciar Sesión"}
             </Nav.Link>
 
             <Nav.Link className="fw-semibold" href="#link">
