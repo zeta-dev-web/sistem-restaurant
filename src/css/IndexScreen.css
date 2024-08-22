@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   border-radius: 0 !important;
+  height: 100%;
 }
 
 .card-img-top {
@@ -52,6 +53,17 @@
   padding-right: 0;
   padding-left: 0;
 }
+.client-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+  max-height: 100% !important;
+} 
+
+
+/* estilo para moviles */
 @media (max-width: 767px) {
   
   .admin-card {
@@ -120,9 +132,6 @@
   .kitchen-card{
     height: 320px;
   }
-  .waiter-card {
-    height: 420px;
-  }
 
 
   .custom-card {
@@ -137,4 +146,61 @@
   .row {
     margin: 0;
   }
+  .admin-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    max-height: 520px !important;
+  }
+
+  .waiter-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    max-height: 484px !important;
+  }
+
+  .kitchen-card {
+  
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    max-height: 325px !important;
+  }
+  .client-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    max-height: 100% !important;
+  }
+}
+/* para pantallas de laptop */
+@media (min-width: 1440px) and (min-height: 920px) {
+
+  .custom-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    height: 100%;
+  }
+
+  .client-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    max-height: 100% !important;
+  } 
+
 }

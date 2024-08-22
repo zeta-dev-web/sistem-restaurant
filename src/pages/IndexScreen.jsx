@@ -10,10 +10,12 @@ const IndexScreen = () => {
 
   return (
     <div
-      className="container-fluid d-flex flex-column justify-content-between"
+      className="container-fluid d-flex flex-column justify-content-between p-0 m-0"
       style={{ height: "calc(100vh - 60px)" }}
     >
-      <div className="row flex-grow-1 sm-pantalla">
+      <div className= {`${
+            userRole === "client" ? "h-100" : "row flex-grow-1"
+          }`}>
         {/* Admin Panel - Visible only to Admin */}
         <div
           className={`col-lg-3 col-md-6 col-12 m-0 p-0 border-0 ${
@@ -38,7 +40,7 @@ const IndexScreen = () => {
             userRole === "waiter" || userRole === "client"
               ? "d-none"
               : userRole === "kitchen"
-              ? "col-lg-12 col-md-12 col-12"
+              ? "col-lg-4 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
           } m-0 p-0 border-0 custom-card`}
         >
@@ -60,9 +62,9 @@ const IndexScreen = () => {
             userRole === "client"
               ? "d-none"
               : userRole === "waiter"
-              ? "col-lg-12 col-md-12 col-12"
+              ? "col-lg-6 col-md-12 col-12"
               : userRole === "kitchen"
-              ? "col-lg-12 col-md-12 col-12"
+              ? "col-lg-4 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
           } m-0 p-0 border-0 custom-card`}
         >
@@ -88,9 +90,9 @@ const IndexScreen = () => {
             userRole === "client"
               ? "col-lg-12 col-md-12 col-12"
               : userRole === "kitchen"
-              ? "col-lg-12 col-md-12 col-12"
+              ? "col-lg-4 col-md-12 col-12"
               : userRole === "waiter"
-              ? "col-lg-12 col-md-12 col-12"
+              ? "col-lg-6 col-md-12 col-12"
               : "col-lg-3 col-md-6 col-12"
           } m-0 p-0 border-0 custom-card`}
         >
