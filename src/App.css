@@ -1,0 +1,13 @@
+/* Ajuste de Z-index y Posicionamiento */
+
+.navbar {
+    position: sticky;  /* o fixed si quieres que el navbar se mantenga siempre visible */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #index-screen {  /* Asumiendo que tienes un id "index-screen" en IndexScreen */
+    position: relative;
+    z-index: 1;
+  }
+  

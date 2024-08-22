@@ -1,12 +1,9 @@
 import { React, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import NavbarApp from "./components/NavbarApp.jsx";
 import FooterApp from "./components/FooterApp.jsx";
 import AboutScreen from "./pages/AboutScreen.jsx";
-import HomeScreen from "./pages/HomeScreen.jsx";
 import IndexScreen from "./pages/IndexScreen.jsx";
 import ErrorScreen from "./pages/ErrorScreen.jsx";
 import LoginScreen from "./pages/LoginScreen.jsx";
@@ -18,27 +15,25 @@ import PanelkitchenScreen from "./pages/PanelkitchenScreen.jsx";
 
 function App() {
   const [darkMode, setdarkMode] = useState(true);  
+  const [login, setLogin] = useState(false);
+  const [userRole, setUserRole] = useState(localStorage.getItem('userRole') || 'client');
   return (
-    <div className="d-flex flex-column justify-content-between h-100"> 
-    <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} />
-    <IndexScreen darkMode={darkMode} />
-    <FooterApp darkMode={darkMode} />
-      {/* <BrowserRouter>
-       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="Iniciar Sesion" element={<LoginScreen />} />
-        <Route path="Panel Admin" element={<PanelAdminScreen />} />
-        <Route path="Panel Meseros" element={<PanelWaiterScreen />} />
-        <Route path="Panel Cocina" element={<PanelkitchenScreen />} />
-        <Route path="/*" element={<ErrorScreen/>} />
-      </Routes>
-      <Footer/>
+    <BrowserRouter>
+      <div className="d-flex flex-column justify-content-between h-100">
+        <NavbarApp darkMode={darkMode} setdarkMode={setdarkMode} login={login}/>
+        <Routes>
+          <Route path="/" element={<IndexScreen darkMode={darkMode} />} />
+          <Route path="login" element={<LoginScreen />} />
+          <Route path="admin" element={<PanelAdminScreen />} />
+          <Route path="waiter" element={<PanelWaiterScreen />} />
+          <Route path="kitchen" element={<PanelkitchenScreen />} />
+          <Route path="*" element={<ErrorScreen />} />
+        </Routes>
+        <FooterApp darkMode={darkMode} />
       </div>
-    </BrowserRouter> */}
-    </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
