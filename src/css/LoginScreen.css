@@ -1,0 +1,15 @@
+.login-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
