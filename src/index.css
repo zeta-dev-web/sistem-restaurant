@@ -1,7 +1,6 @@
 /* Asegura que el body y el root ocupen el 100% de la altura */
 html, body {
     height: 100vh;
-    width: 100vw;
     margin: 0;
     padding: 0;
   }

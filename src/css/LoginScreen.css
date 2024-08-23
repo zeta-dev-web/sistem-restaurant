@@ -1,15 +1,191 @@
-.login-image {
-  height: 100%;
-  object-fit: cover;
-  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+/* Estilos generales */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Columna del formulario */
+.login-column {
+height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Bordes redondeados */
 }
 
 .login-form {
+  max-width: 500px;
   width: 100%;
-  max-width: 400px; /* Ancho máximo del formulario */
+  object-fit: cover;
 }
 
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+.logo-mibar {
+  color: #ff3e41;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.logo-icon {
+  width: 40px; /* Ajusta el tamaño del icono según sea necesario */
+  height: auto; /* Mantiene la proporción del icono */
+  margin-right: 2px; /* Espacio entre el icono y el texto */
+}
+
+.btn-signin {
+  background: linear-gradient(45deg, #ff7e5f, #ff3e41); /* Degradado naranja/rojo */
+  color: #fff !important; /* Color de texto en el botón */
+  font-weight: bold;
+  border: none;
+  border-radius: 100px !important;
+  padding: 12px 0;
+  transition: background 0.3s ease;
+  width: 50%;
+  margin: 0 auto; /* Centrar el botón */
+}
+
+.btn-signin:hover {
+  background: linear-gradient(45deg, #ff3e41, #ff7e5f); /* Inversión de colores en hover */
+}
+
+.btn-signin:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 62, 65, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos de los enlaces */
+.login-link,
+.sign-up {
+  color: #ff3e41;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link:hover,
+.sign-up:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+/* Estilos de los campos de formulario */
+.form-group {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 100% !important;
+  border-radius: 50px;
+  padding-left: 40px; /* Espacio para el ícono */
+  height: 45px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #ff3e41;
+  box-shadow: 0 0 5px rgba(255, 62, 65, 0.3);
+}
+
+/* Estilo del ícono en el label */
+.floating-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Espacio suficiente para el ícono */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px; /* Ajusta el borde como prefieras */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: -20px; /* Espacio para que el ícono quede a la izquierda del input */
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #ff3e41;
+  pointer-events: none; /* Evita que el ícono interfiera con el input */
+}
+
+
+
+/* Estilo del label flotante */
+.floating-label {
+  position: absolute;
+  top: 50%;
+  left: 30px; /* Espacio adicional para evitar superposición con el ícono */
+  font-size: 16px;
+  color: #ff3e41;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s ease all;
+}
+
+/* Cuando el input está enfocado o tiene valor, el label flota hacia arriba */
+.floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+  top: -8px;
+  left: 10px; /* Espacio adecuado para mantener la consistencia con el ícono */
+  font-size: 12px;
+  color: #999;
+  background-color: white;
+  padding-left:24px;
+  padding-right: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+/* Estilo del input cuando está enfocado */
+.floating-input:focus {
+  border-color: #f25f3a !important;
+  box-shadow: 0 0 8px rgba(243, 69, 26, 0.863) !important
+}
+
+/* Cambios en el ícono cuando el input está enfocado o tiene valor */
+.floating-input:focus + .floating-label .input-icon,
+.floating-input:not(:placeholder-shown) + .floating-label .input-icon {
+  font-size: 14px;
+  color: #999; /* Cambia el color del ícono a gris */
+  background-color: white; /* Fondo blanco para el ícono */
+  transform: translateY(-50%) translateX(24px); /* Ajusta la posición vertical y horizontal del ícono */
+}
+
+/* Estilos de la columna de la imagen */
+.image-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-image {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 40, 26, 0.63); /* Superposición naranja con transparencia */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  margin-top: 10px;
 }
