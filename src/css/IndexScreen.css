@@ -211,3 +211,39 @@
   } 
 
 }
+
+@media (min-width: 993px) {
+  .card-img-top {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .custom-overlay {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .custom-card:hover .card-img-top {
+    filter: grayscale(0%); /* Imagen en color al hacer hover */
+  }
+
+  .custom-card:hover .custom-overlay {
+    transform: translateY(0); /* Mostrar la pestaña al hacer hover */
+  }
+}
+
+/* Estilos para dispositivos móviles y tabletas */
+@media (max-width: 992px) {
+  .card-img-top {
+    filter: grayscale(0%); /* Imágenes en color por defecto */
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .custom-overlay {
+    transform: translateY(0); /* Mostrar la pestaña por defecto */
+  }
+
+  .custom-card.inactive .card-img-top {
+    filter: grayscale(100%); /* Imagen en gris si no está activa */
+  }
+}
